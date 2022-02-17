@@ -10,7 +10,7 @@
 
 //Display Search-banner full width and display the "Advance options" instead of the Search icon only on Home Page. [Added by: Saurabh; Date: 03-01-2022]
 //Display Search-banner full width and display the "Advance options" instead of the Search icon on Home Page, on category page and tag page. [Added by: Ajroddin; Date: 03-02-2022]
-html.home-search-banner, body.category:not(.archetype-regular, .tag-page), body.tags-page:not(.category-header){
+html.home-search-banner, body.category:not(.archetype-regular):not(.tag-page), body.tags-page:not(.category-header){
     #main-outlet {
         padding-top: 0px !important;
         .discovery-list-container-parent .discovery-list-container-top-outlet.tag-sidebar {
