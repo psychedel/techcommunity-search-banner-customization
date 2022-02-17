@@ -1,0 +1,68 @@
+//techcommunity-search-banner-customization - common.scss
+
+//Hide the Search banner.
+.custom-search-banner-wrap {
+    display: none;
+}
+#main-outlet {
+    padding-top: 2.5em !important;
+}
+
+//Display Search-banner full width and display the "Advance options" instead of the Search icon only on Home Page. [Added by: Saurabh; Date: 03-01-2022]
+//Display Search-banner full width and display the "Advance options" instead of the Search icon on Home Page, on category page and tag page. [Added by: Ajroddin; Date: 03-02-2022]
+html.home-search-banner, body.category:not(.archetype-regular, .tag-page), body.tags-page:not(.category-header){
+    #main-outlet {
+        padding-top: 0px !important;
+        .discovery-list-container-parent .discovery-list-container-top-outlet.tag-sidebar {
+            margin-bottom: 0px !important;
+        }
+    }
+    .custom-search-banner-wrap {
+        display: block !important;
+        margin: 0 auto 15px;
+        padding: 0px !important;
+        & > div {
+            max-width: 100%;    
+        }
+        .search-widget {
+             .search-icon {
+                padding: 10px 10px !important;
+                left: 0;
+                right: unset;
+            }
+            .search-input {
+                background-color: var(--secondary);
+                input#search-term {
+                    margin-left: 30px !important;
+                    padding-left: 5px;
+                    font-size: 1.08rem;
+                    @include breakpoint("mobile-large") {                    
+                         padding-right: 50px !important;
+                    }
+                }
+                .searching {
+                    top: 0.44em !important;
+                    right: 0.5em !important;
+                    a.show-advanced-search {
+                        display: inline-block !important;
+                    }
+                    a.show-advanced-search:after {
+                        content: ' Advanced options';
+                        color: #757575;
+                    }
+                    @include breakpoint("mobile-large") {
+                        a.show-advanced-search:after {
+                            content: '';
+                        }
+                    }
+                }
+            }
+            .results {
+                width: 100% !important;
+                max-width: 100% !important;
+                top: 2.5em;
+            }
+        }
+    }
+}
+
