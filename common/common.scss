@@ -1,4 +1,9 @@
 //techcommunity-search-banner-customization - common.scss
+// Hide the search button lupa in search banner
+.widget-button.search-icon
+{
+    display: none;
+}
 
 //Hide the Search banner.
 .custom-search-banner-wrap {
