@@ -61,6 +61,7 @@ html.home-search-banner, body[class*=" category-"].category:not(.archetype-regul
                 width: 100% !important;
                 max-width: 100% !important;
                 top: 2.5em;
+                z-index: 55 !important; // Increase the z-index of searchbar drop-down to fix the overlapping issue on KB and Feedback pages. [Aaded by Saurabh; Date: 04-03-2022]
             }
         }
     }
