@@ -8,8 +8,7 @@
     padding-top: 2.5em !important;
 }
 
-//Display Search-banner full width and display the "Advance options" instead of the Search icon only on Home Page. [Added by: Saurabh; Date: 03-01-2022]
-//Display Search-banner full width and display the "Advance options" instead of the Search icon on Home Page, on category page and tag page. [Added by: Ajroddin; Date: 03-02-2022]
+//Display Search-banner full width and display the "Advance options" instead of the Search icon on Home Page, on category page and tag page. [Added by: Saurabh; Date: 03-01-2022]
 html.home-search-banner, body[class*=" category-"].category:not(.archetype-regular):not(.tag-page), body.tags-page:not(.category-header){
     #main-outlet {
         padding-top: 0px !important;
@@ -29,10 +28,14 @@ html.home-search-banner, body[class*=" category-"].category:not(.archetype-regul
                 padding: 10px 10px !important;
                 left: 0;
                 right: unset;
+                svg.d-icon-search {
+                    height: 1.8em;
+                }
             }
             .search-input {
                 background-color: var(--secondary);
                 input#search-term {
+                    min-height: 46px;
                     margin-left: 30px !important;
                     padding-left: 5px;
                     font-size: 1.08rem;
@@ -41,7 +44,7 @@ html.home-search-banner, body[class*=" category-"].category:not(.archetype-regul
                     }
                 }
                 .searching {
-                    top: 0.44em !important;
+                    top: 0.78em !important;
                     right: 0.5em !important;
                     a.show-advanced-search {
                         display: inline-block !important;
@@ -60,10 +63,9 @@ html.home-search-banner, body[class*=" category-"].category:not(.archetype-regul
             .results {
                 width: 100% !important;
                 max-width: 100% !important;
-                top: 2.5em;
-                z-index: 55 !important; // Increase the z-index of searchbar drop-down to fix the overlapping issue on KB and Feedback pages. [Aaded by Saurabh; Date: 04-03-2022]
+                top: 3.28em;
+                z-index: 55 !important; // Increase the z-index of search bar drop-down to fix the overlapping issue on KB and Feedback pages. [Aaded by Saurabh; Date: 04-03-2022]
             }
         }
     }
 }
-
